@@ -99,16 +99,16 @@ The billing engine applies progressive slabs based on the consumer's connection 
 - **301 – 500 units**: Rs. 7.50 / unit | Fixed Charge: Rs. 100.00 | Tax: 5%
 - **Above 500 units**: Rs. 9.80 / unit | Fixed Charge: Rs. 150.00 | Tax: 5%
 
-### 🏢 Commercial
+###  Commercial
 - **0 – 200 units**: Rs. 8.50 / unit | Fixed Charge: Rs. 200.00 | Tax: 9%
 - **201 – 750 units**: Rs. 11.00 / unit | Fixed Charge: Rs. 350.00 | Tax: 9%
 - **Above 750 units**: Rs. 13.50 / unit | Fixed Charge: Rs. 500.00 | Tax: 9%
 
-### 🏭 Industrial
+###  Industrial
 - **0 – 1000 units**: Rs. 9.00 / unit | Fixed Charge: Rs. 800.00 | Tax: 12%
 - **Above 1000 units**: Rs. 12.50 / unit | Fixed Charge: Rs. 1500.00 | Tax: 12%
 
-### 🌾 Agricultural
+###  Agricultural
 - **0 – 500 units**: Rs. 1.50 / unit | Fixed Charge: Rs. 30.00 | Tax: 2%
 - **Above 500 units**: Rs. 2.80 / unit | Fixed Charge: Rs. 50.00 | Tax: 2%
 
@@ -157,48 +157,3 @@ electricity-consumption-system/
 ```
 
 ---
-
-## 6. How to Run
-
-### Step 1: Initialize Database
-```bash
-cd database
-python init_database.py
-```
-*Creates `electricity.db` and exports `energy_data.csv`.*
-
-### Step 2: Compile & Run the Java Application
-**On Windows:**
-Double-click `java_app\compile_and_run.bat` or run:
-```cmd
-cd java_app
-javac -d bin src/com/electricity/model/*.java src/com/electricity/dao/*.java src/com/electricity/service/*.java src/com/electricity/Main.java
-java -cp bin com.electricity.Main
-```
-
-### Step 3: Run Python Visualizations & Energy Analytics
-```cmd
-cd python_analysis
-pip install -r requirements.txt
-python energy_analysis.py
-```
-*Outputs charts to `python_analysis/output/` and displays the audit summary in your terminal.*
-
----
-
-## 7. Viva & Lab Examination Q&A
-
-**Q1: How is progressive slab billing calculated?**  
-*A:* Rather than charging all units at a single maximum rate, units are allocated into tiers. For example, for 250 units under Domestic:
-- First 100 units @ Rs. 3.50 = Rs. 350
-- Remaining 150 units @ Rs. 5.20 = Rs. 780
-- Total Energy Charges = Rs. 1,130 + Fixed Charge (Rs. 75) + 5% Tax.
-
-**Q2: How does the system satisfy Requirement 3 (`units = current - previous`)?**  
-*A:* In `MeterReading.java`, `calculateUnitsConsumed()` computes `currentReading - previousReading` and validates `currentReading >= previousReading`. The database also enforces `CONSTRAINT chk_readings CHECK (current_reading >= previousReading)`.
-
-**Q3: How are high-consumption consumers identified in Python?**  
-*A:* Through multi-level criteria:
-1. Static threshold filter (`units_consumed >= 500 kWh`).
-2. Severity categorization (`CRITICAL` >= 3000, `SEVERE` >= 1000, `HIGH` >= 500).
-3. Outlier detection comparing individual usage against the category mean.
