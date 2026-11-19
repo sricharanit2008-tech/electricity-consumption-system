@@ -1,0 +1,49 @@
+consumer_id,name,connection_type,address,meter_number,reading_id,billing_month,reading_date,previous_reading,current_reading,units_consumed,energy_charges,fixed_charges,tax_amount,bill_total,payment_status
+C401,Kisan Agro Cooperative,Agricultural,"Village Ramnagar, Farm 12",MTR-AGR-401,41,2024-01,2024-01-31,6100,6450,350,525,30,11.1,566.1,Paid
+C402,Greenfield Dairy Farms,Agricultural,National Highway 48,MTR-AGR-402,45,2024-01,2024-01-31,4800,5080,280,0.0,0.0,0.0,0.0,Unbilled
+C201,Apex Tech Solutions Hub,Commercial,"IT Tech Park, Block C",MTR-COM-201,21,2024-01,2024-01-31,12500,13350,850,9100,500,864,10464,Paid
+C202,Metro Central Supermarket,Commercial,"Market Square, Main Road",MTR-COM-202,25,2024-01,2024-01-31,8900,9550,650,0.0,0.0,0.0,0.0,Unbilled
+C203,Grand Cafe & Bakers,Commercial,"Corner Street, Downtown",MTR-COM-203,29,2024-01,2024-01-31,4500,4820,320,0.0,0.0,0.0,0.0,Unbilled
+C103,Rajesh Verma,Domestic,"88 Hill Road, Civil Lines",MTR-DOM-103,9,2024-01,2024-01-31,2100,2380,280,1286,75,68.05,1429.05,Paid
+C105,Vikram Singh,Domestic,45 Royal Enclave,MTR-DOM-105,17,2024-01,2024-01-31,3400,3590,190,0.0,0.0,0.0,0.0,Unbilled
+C101,Aarav Sharma,Domestic,"14 Maple Residency, Green Park",MTR-DOM-101,1,2024-01,2024-01-31,1200,1340,140,558,75,31.65,664.65,Paid
+C104,Ananya Gupta,Domestic,104 Lakeview Apartments,MTR-DOM-104,13,2024-01,2024-01-31,400,510,110,0.0,0.0,0.0,0.0,Unbilled
+C102,Priya Patel,Domestic,"22 Sunset Boulevard, Sector 4",MTR-DOM-102,5,2024-01,2024-01-31,850,930,80,0.0,0.0,0.0,0.0,Unbilled
+C301,Falcon Heavy Steels Ltd,Industrial,"Industrial Area, Phase 1",MTR-IND-301,33,2024-01,2024-01-31,45000,49200,4200,49000,1500,6060,56560,Paid
+C302,Sunrise Textile Mills,Industrial,"MIDC Zone, Plot 5",MTR-IND-302,37,2024-01,2024-01-31,32000,34800,2800,0.0,0.0,0.0,0.0,Unbilled
+C401,Kisan Agro Cooperative,Agricultural,"Village Ramnagar, Farm 12",MTR-AGR-401,42,2024-02,2024-02-29,6450,6880,430,0.0,0.0,0.0,0.0,Unbilled
+C402,Greenfield Dairy Farms,Agricultural,National Highway 48,MTR-AGR-402,46,2024-02,2024-02-29,5080,5400,320,0.0,0.0,0.0,0.0,Unbilled
+C201,Apex Tech Solutions Hub,Commercial,"IT Tech Park, Block C",MTR-COM-201,22,2024-02,2024-02-29,13350,14280,930,0.0,0.0,0.0,0.0,Unbilled
+C202,Metro Central Supermarket,Commercial,"Market Square, Main Road",MTR-COM-202,26,2024-02,2024-02-29,9550,10240,690,0.0,0.0,0.0,0.0,Unbilled
+C203,Grand Cafe & Bakers,Commercial,"Corner Street, Downtown",MTR-COM-203,30,2024-02,2024-02-29,4820,5170,350,0.0,0.0,0.0,0.0,Unbilled
+C103,Rajesh Verma,Domestic,"88 Hill Road, Civil Lines",MTR-DOM-103,10,2024-02,2024-02-29,2380,2720,340,0.0,0.0,0.0,0.0,Unbilled
+C105,Vikram Singh,Domestic,45 Royal Enclave,MTR-DOM-105,18,2024-02,2024-02-29,3590,3800,210,0.0,0.0,0.0,0.0,Unbilled
+C101,Aarav Sharma,Domestic,"14 Maple Residency, Green Park",MTR-DOM-101,2,2024-02,2024-02-29,1340,1505,165,688,75,38.15,801.15,Paid
+C104,Ananya Gupta,Domestic,104 Lakeview Apartments,MTR-DOM-104,14,2024-02,2024-02-29,510,640,130,0.0,0.0,0.0,0.0,Unbilled
+C102,Priya Patel,Domestic,"22 Sunset Boulevard, Sector 4",MTR-DOM-102,6,2024-02,2024-02-29,930,1025,95,0.0,0.0,0.0,0.0,Unbilled
+C301,Falcon Heavy Steels Ltd,Industrial,"Industrial Area, Phase 1",MTR-IND-301,34,2024-02,2024-02-29,49200,53800,4600,0.0,0.0,0.0,0.0,Unbilled
+C302,Sunrise Textile Mills,Industrial,"MIDC Zone, Plot 5",MTR-IND-302,38,2024-02,2024-02-29,34800,37750,2950,0.0,0.0,0.0,0.0,Unbilled
+C401,Kisan Agro Cooperative,Agricultural,"Village Ramnagar, Farm 12",MTR-AGR-401,43,2024-03,2024-03-31,6880,7420,540,0.0,0.0,0.0,0.0,Unbilled
+C402,Greenfield Dairy Farms,Agricultural,National Highway 48,MTR-AGR-402,47,2024-03,2024-03-31,5400,5780,380,0.0,0.0,0.0,0.0,Unbilled
+C201,Apex Tech Solutions Hub,Commercial,"IT Tech Park, Block C",MTR-COM-201,23,2024-03,2024-03-31,14280,15380,1100,0.0,0.0,0.0,0.0,Unbilled
+C202,Metro Central Supermarket,Commercial,"Market Square, Main Road",MTR-COM-202,27,2024-03,2024-03-31,10240,11020,780,0.0,0.0,0.0,0.0,Unbilled
+C203,Grand Cafe & Bakers,Commercial,"Corner Street, Downtown",MTR-COM-203,31,2024-03,2024-03-31,5170,5580,410,0.0,0.0,0.0,0.0,Unbilled
+C103,Rajesh Verma,Domestic,"88 Hill Road, Civil Lines",MTR-DOM-103,11,2024-03,2024-03-31,2720,3260,540,0.0,0.0,0.0,0.0,Unbilled
+C105,Vikram Singh,Domestic,45 Royal Enclave,MTR-DOM-105,19,2024-03,2024-03-31,3800,4080,280,0.0,0.0,0.0,0.0,Unbilled
+C101,Aarav Sharma,Domestic,"14 Maple Residency, Green Park",MTR-DOM-101,3,2024-03,2024-03-31,1505,1725,220,974,75,52.45,1101.45,Paid
+C104,Ananya Gupta,Domestic,104 Lakeview Apartments,MTR-DOM-104,15,2024-03,2024-03-31,640,810,170,0.0,0.0,0.0,0.0,Unbilled
+C102,Priya Patel,Domestic,"22 Sunset Boulevard, Sector 4",MTR-DOM-102,7,2024-03,2024-03-31,1025,1145,120,0.0,0.0,0.0,0.0,Unbilled
+C301,Falcon Heavy Steels Ltd,Industrial,"Industrial Area, Phase 1",MTR-IND-301,35,2024-03,2024-03-31,53800,59100,5300,0.0,0.0,0.0,0.0,Unbilled
+C302,Sunrise Textile Mills,Industrial,"MIDC Zone, Plot 5",MTR-IND-302,39,2024-03,2024-03-31,37750,40950,3200,0.0,0.0,0.0,0.0,Unbilled
+C401,Kisan Agro Cooperative,Agricultural,"Village Ramnagar, Farm 12",MTR-AGR-401,44,2024-04,2024-04-30,7420,8080,660,1198,50,24.96,1272.96,Unpaid
+C402,Greenfield Dairy Farms,Agricultural,National Highway 48,MTR-AGR-402,48,2024-04,2024-04-30,5780,6230,450,0.0,0.0,0.0,0.0,Unbilled
+C201,Apex Tech Solutions Hub,Commercial,"IT Tech Park, Block C",MTR-COM-201,24,2024-04,2024-04-30,15380,16640,1260,14635,500,1362.15,16497.15,Unpaid
+C202,Metro Central Supermarket,Commercial,"Market Square, Main Road",MTR-COM-202,28,2024-04,2024-04-30,11020,11910,890,0.0,0.0,0.0,0.0,Unbilled
+C203,Grand Cafe & Bakers,Commercial,"Corner Street, Downtown",MTR-COM-203,32,2024-04,2024-04-30,5580,6060,480,0.0,0.0,0.0,0.0,Unbilled
+C103,Rajesh Verma,Domestic,"88 Hill Road, Civil Lines",MTR-DOM-103,12,2024-04,2024-04-30,3260,3910,650,4360,150,225.5,4735.5,Unpaid
+C105,Vikram Singh,Domestic,45 Royal Enclave,MTR-DOM-105,20,2024-04,2024-04-30,4080,4440,360,0.0,0.0,0.0,0.0,Unbilled
+C101,Aarav Sharma,Domestic,"14 Maple Residency, Green Park",MTR-DOM-101,4,2024-04,2024-04-30,1725,1995,270,1234,75,65.45,1374.45,Unpaid
+C104,Ananya Gupta,Domestic,104 Lakeview Apartments,MTR-DOM-104,16,2024-04,2024-04-30,810,1030,220,0.0,0.0,0.0,0.0,Unbilled
+C102,Priya Patel,Domestic,"22 Sunset Boulevard, Sector 4",MTR-DOM-102,8,2024-04,2024-04-30,1145,1290,145,0.0,0.0,0.0,0.0,Unbilled
+C301,Falcon Heavy Steels Ltd,Industrial,"Industrial Area, Phase 1",MTR-IND-301,36,2024-04,2024-04-30,59100,64950,5850,69625,1500,8535,79660,Unpaid
+C302,Sunrise Textile Mills,Industrial,"MIDC Zone, Plot 5",MTR-IND-302,40,2024-04,2024-04-30,40950,44400,3450,0.0,0.0,0.0,0.0,Unbilled
