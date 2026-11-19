@@ -79,7 +79,7 @@ public class Main {
     private static void printBanner() {
         System.out.println("\n===============================================================================");
         System.out.println("  ⚡ ELECTRICITY CONSUMPTION MANAGEMENT & ENERGY USAGE ANALYSIS SYSTEM ⚡     ");
-        System.out.println("                 Scenario 14 | Register No.: 14, 44, 74, 104                   ");
+        System.out.println("                 Scenario 14 | Register No.: 732925ITR104                       ");
         System.out.println("===============================================================================");
     }
 
