@@ -1,5 +1,5 @@
 # Electricity Consumption Management and Energy Usage Analysis System
-**Scenario 14 | Register Numbers: 14, 44, 74, 104**  
+**Scenario 14 | Register Numbers: 732925ITR104**  
 *Technology Stack: Java (Core/JDBC), DBMS (MySQL/SQLite), Python (Pandas/Matplotlib/Seaborn)*
 
 ---
