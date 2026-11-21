@@ -65,6 +65,33 @@ public class ConsumerDAO {
         return true;
     }
 
+    /**
+     * Functional Requirement 1: Update existing consumer details.
+     */
+    public boolean updateConsumer(Consumer consumer) {
+        if (consumer == null || consumer.getConsumerId() == null) return false;
+        consumerStore.put(consumer.getConsumerId().toUpperCase(), consumer);
+
+        if (DBConnection.isDriverAvailable()) {
+            String sql = "UPDATE consumers SET name = ?, address = ?, phone = ?, connection_type = ?, meter_number = ?, status = ? WHERE UPPER(consumer_id) = ?";
+            try (Connection conn = DBConnection.getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.setString(1, consumer.getName());
+                stmt.setString(2, consumer.getAddress());
+                stmt.setString(3, consumer.getPhone());
+                stmt.setString(4, consumer.getConnectionType());
+                stmt.setString(5, consumer.getMeterNumber());
+                stmt.setString(6, consumer.getStatus());
+                stmt.setString(7, consumer.getConsumerId().toUpperCase());
+                stmt.executeUpdate();
+                return true;
+            } catch (SQLException e) {
+                System.err.println("[ConsumerDAO] DB Update Error: " + e.getMessage());
+            }
+        }
+        return true;
+    }
+
     public Consumer getConsumerById(String consumerId) {
         if (DBConnection.isDriverAvailable()) {
             String sql = "SELECT * FROM consumers WHERE UPPER(consumer_id) = ?";
@@ -110,7 +137,7 @@ public class ConsumerDAO {
         c.setPhone(rs.getString("phone"));
         c.setConnectionType(rs.getString("connection_type"));
         c.setMeterNumber(rs.getString("meter_number"));
-        Date dt = rs.getDate("connection_date");
+        java.sql.Date dt = rs.getDate("connection_date");
         c.setConnectionDate(dt != null ? dt.toLocalDate() : LocalDate.now());
         c.setStatus(rs.getString("status"));
         return c;
