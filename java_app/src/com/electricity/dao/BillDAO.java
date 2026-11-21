@@ -118,9 +118,9 @@ public class BillDAO {
         b.setFixedCharges(rs.getDouble("fixed_charges"));
         b.setTaxAmount(rs.getDouble("tax_amount"));
         b.setTotalAmount(rs.getDouble("total_amount"));
-        Date bDate = rs.getDate("bill_date");
+        java.sql.Date bDate = rs.getDate("bill_date");
         b.setBillDate(bDate != null ? bDate.toLocalDate() : LocalDate.now());
-        Date dDate = rs.getDate("due_date");
+        java.sql.Date dDate = rs.getDate("due_date");
         b.setDueDate(dDate != null ? dDate.toLocalDate() : LocalDate.now().plusDays(15));
         b.setPaymentStatus(rs.getString("payment_status"));
         return b;
