@@ -87,6 +87,33 @@ public class MeterReadingDAO {
         return true;
     }
 
+    /**
+     * Business Rule 6: Duplicate readings for the same consumer and billing period must not be accepted.
+     */
+    public boolean hasReadingForMonth(String consumerId, String billingMonth) {
+        if (consumerId == null || billingMonth == null) return false;
+        if (DBConnection.isDriverAvailable()) {
+            String sql = "SELECT COUNT(*) FROM meter_readings WHERE UPPER(consumer_id) = ? AND billing_month = ?";
+            try (Connection conn = DBConnection.getConnection();
+                 PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.setString(1, consumerId.toUpperCase());
+                stmt.setString(2, billingMonth.trim());
+                ResultSet rs = stmt.executeQuery();
+                if (rs.next()) {
+                    return rs.getInt(1) > 0;
+                }
+            } catch (SQLException e) {
+                System.err.println("[MeterReadingDAO] DB Check Error: " + e.getMessage());
+            }
+        }
+        for (MeterReading r : readingStore) {
+            if (r.getConsumerId().equalsIgnoreCase(consumerId) && r.getBillingMonth().equalsIgnoreCase(billingMonth.trim())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public List<MeterReading> getAllReadings() {
         if (DBConnection.isDriverAvailable()) {
             List<MeterReading> list = new ArrayList<>();
@@ -137,7 +164,7 @@ public class MeterReadingDAO {
         r.setReadingId(rs.getInt("reading_id"));
         r.setConsumerId(rs.getString("consumer_id"));
         r.setBillingMonth(rs.getString("billing_month"));
-        Date dt = rs.getDate("reading_date");
+        java.sql.Date dt = rs.getDate("reading_date");
         r.setReadingDate(dt != null ? dt.toLocalDate() : LocalDate.now());
         r.setPreviousReading(rs.getDouble("previous_reading"));
         r.setCurrentReading(rs.getDouble("current_reading"));
